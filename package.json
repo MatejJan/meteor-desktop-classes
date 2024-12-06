@@ -1,0 +1,28 @@
+{
+  "name": "desktop-classes",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "desktop": "meteor-desktop"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.23.5",
+    "jquery": "^3.7.1",
+    "meteor-node-stubs": "^1.2.7"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@meteor-community/meteor-desktop": "^3.3.0",
+    "electron": "17.4.11",
+    "electron-builder": "24.6.4"
+  }
+}
